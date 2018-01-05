@@ -1,0 +1,2 @@
+D:\WorkSpace_C#\_TravixTestTask\TravixTestApi\Infrastructure\obj\Debug\Infrastrucutre.csprojResolveAssemblyReference.cache
+D:\WorkSpace_C#\_TravixTestTask\TravixTestApi\Infrastructure\obj\Debug\Infrastrucutre.csproj.CoreCompileInputs.cache
