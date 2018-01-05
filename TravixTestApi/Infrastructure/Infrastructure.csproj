@@ -60,7 +60,7 @@
     <Compile Include="Infrastructure\InfrastructureMappingRegisterService.cs" />
     <Compile Include="Infrastructure\ValidationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\Contract\IRepository.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

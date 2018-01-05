@@ -223,6 +223,7 @@ D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\System.
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\System.Xml.XmlSerializer.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\System.Xml.XPath.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\System.Xml.XPath.XDocument.dll
+D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\AutoMapper.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Castle.Core.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\DAL.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Infrastructure.dll
@@ -230,17 +231,16 @@ D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Microso
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Moq.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\AutoMapper.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Ninject.dll
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\DAL.pdb
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Infrastructure.pdb
+D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\AutoMapper.xml
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Castle.Core.xml
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Moq.pdb
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Moq.xml
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\AutoMapper.xml
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\bin\Debug\Ninject.xml
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\obj\Debug\Infrastructure.Tests.csprojResolveAssemblyReference.cache
 D:\WorkSpace_C#\_TravixTest\TravixTestApi\Infrastructure.Tests\obj\Debug\Infrastructure.Tests.csproj.CoreCompileInputs.cache

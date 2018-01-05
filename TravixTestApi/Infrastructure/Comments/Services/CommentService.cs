@@ -6,8 +6,8 @@ using DAL.Entities;
 using Infrastructure.Comments.Contract;
 using Infrastructure.Comments.Mapping;
 using Infrastructure.Comments.Models;
+using Infrastructure.Infrastructure;
 using Infrastructure.Infrastructure.Contract;
-using Infrastructure.Repository.Contract;
 using Ninject;
 
 namespace Infrastructure.Comments.Services

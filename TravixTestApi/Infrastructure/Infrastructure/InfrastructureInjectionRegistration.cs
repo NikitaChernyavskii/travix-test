@@ -4,7 +4,6 @@ using Infrastructure.Comments.Models;
 using Infrastructure.Comments.Services;
 using Infrastructure.Comments.Validators;
 using Infrastructure.Infrastructure.Contract;
-using Infrastructure.Repository.Contract;
 using Ninject;
 
 namespace Infrastructure.Infrastructure

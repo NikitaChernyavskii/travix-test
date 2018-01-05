@@ -21,10 +21,14 @@ namespace TravixTestApi
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            RegisterInjections();
+            MappingRegisterService.RegisterMappings();
+        }
+
+        private static void RegisterInjections()
+        {
             IKernel kernel = NinjectWebCommon.Bootstrapper.Kernel;
             InfrastructureInjectionRegistration.Register(kernel);
-
-            MappingRegisterService.RegisterMappings();
         }
     }
 }

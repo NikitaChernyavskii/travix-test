@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DAL.Entities;
-using Infrastructure.Repository.Contract;
+using Infrastructure.Infrastructure;
 
 namespace Infrastructure.Comments.Services
 {

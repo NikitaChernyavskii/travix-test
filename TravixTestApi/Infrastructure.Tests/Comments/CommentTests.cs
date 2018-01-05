@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AutoMapper;
 using DAL.Entities;
 using Infrastructure.Comments.Contract;
 using Infrastructure.Comments.Models;
 using Infrastructure.Comments.Services;
 using Infrastructure.Comments.Validators;
+using Infrastructure.Infrastructure;
 using Infrastructure.Infrastructure.Contract;
-using Infrastructure.Repository.Contract;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -32,10 +33,36 @@ namespace Infrastructure.Tests.Comments
             ICommentService commentService = CreateCommentService();
             List<Comment> commentEntities = CreateComments();
             _mockCommentRepository.Setup(r => r.Get()).Returns(Task.FromResult(commentEntities));
-
+            InitializaAutoMapper();
             List<CommentView> commentsResult = Task.Run(() => commentService.Get()).Result;
 
-            Assert.AreEqual(commentEntities, commentsResult);
+            Assert.AreEqual(commentEntities.Count, commentsResult.Count);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException), "Comment cannot be empty")]
+        public void CommentValidator_ThrowsEmptyOrNullValue()
+        {
+            CommentModel model = new CommentModel
+            {
+                PostId = new Guid("9834d7b9-618d-435b-b86e-d9e861111738"),
+                Value = String.Empty
+            };
+            CommentValidator validator = new CommentValidator();
+            validator.Validate(model);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ValidationException), "Comment cannot be less then 10 and cannot exceed 1000")]
+        public void CommentValidator_ThrowsInvalidValueLength()
+        {
+            CommentModel model = new CommentModel
+            {
+                PostId = new Guid("9834d7b9-618d-435b-b86e-d9e861111738"),
+                Value = "too small"
+            };
+            CommentValidator validator = new CommentValidator();
+            validator.Validate(model);
         }
 
         private List<Comment> CreateComments()
@@ -64,6 +91,14 @@ namespace Infrastructure.Tests.Comments
                 CommentRepository = _mockCommentRepository.Object,
                 CommentValidator = _mockCommentValidator.Object
             };
+        }
+
+        private void InitializaAutoMapper()
+        {
+            Mapper.Initialize(config =>
+            {
+                InfrastructureMappingRegisterService.Register(config);
+            });
         }
     }
 }

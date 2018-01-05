@@ -14,9 +14,9 @@ namespace Infrastructure.Comments.Validators
                 throw new ValidationException("Comment cannot be empty");
             }
 
-            if (context.Value.Length < 1 || context.Value.Length > 1000)
+            if (context.Value.Length < 10 || context.Value.Length > 1000)
             {
-                throw new ValidationException("Comment cannot be less then 1 and cannot exceed 1000");
+                throw new ValidationException("Comment cannot be less then 10 and cannot exceed 1000");
             }
         }
     }

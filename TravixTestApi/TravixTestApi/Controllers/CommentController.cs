@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Infrastructure.Comments.Contract;
 using Infrastructure.Comments.Models;
-using Infrastructure.Infrastructure.Contract;
 using Ninject;
 
 namespace TravixTestApi.Controllers
