@@ -4,6 +4,8 @@ using Infrastructure.Comments.Models;
 using Infrastructure.Comments.Services;
 using Infrastructure.Comments.Validators;
 using Infrastructure.Infrastructure.Contract;
+using Infrastructure.Posts.Contract;
+using Infrastructure.Posts.Services;
 using Ninject;
 
 namespace Infrastructure.Infrastructure
@@ -16,6 +18,8 @@ namespace Infrastructure.Infrastructure
             kernel.Bind<ICommentService>().To<CommentService>();
             kernel.Bind<IValidator<CommentModel>>().To<CommentValidator>();
 
+            kernel.Bind<IRepository<Post>>().To<PostRepository>();
+            kernel.Bind<IPostService>().To<PostService>();
         }
     }
 }

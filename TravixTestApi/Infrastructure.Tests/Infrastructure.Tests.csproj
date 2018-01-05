@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comments\CommentTests.cs" />
+    <Compile Include="InitializeMappingService.cs" />
+    <Compile Include="Posts\PostTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

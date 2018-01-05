@@ -14,7 +14,7 @@ namespace Infrastructure.Comments.Services
 
         public CommentRepository()
         {
-            _mockedComments = CreateComments();
+            _mockedComments = CreateMockedComments();
         }
 
         public async Task<List<Comment>> Get()
@@ -50,7 +50,7 @@ namespace Infrastructure.Comments.Services
             return Task.FromResult(_mockedComments);
         }
 
-        private List<Comment> CreateComments()
+        private List<Comment> CreateMockedComments()
         {
             return new List<Comment>
             {

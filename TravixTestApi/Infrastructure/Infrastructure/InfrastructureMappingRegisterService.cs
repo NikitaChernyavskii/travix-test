@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure.Comments.Mapping;
+using Infrastructure.Posts.Mapping;
 
 namespace Infrastructure.Infrastructure
 {
@@ -8,6 +9,7 @@ namespace Infrastructure.Infrastructure
         public static void Register(IMapperConfigurationExpression config)
         {
             CommentsMapping.Register(config);
+            PostMapping.Register(config);
         }
     }
 }

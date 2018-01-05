@@ -59,6 +59,12 @@
     <Compile Include="Infrastructure\InfrastructureInjectionRegistration.cs" />
     <Compile Include="Infrastructure\InfrastructureMappingRegisterService.cs" />
     <Compile Include="Infrastructure\ValidationException.cs" />
+    <Compile Include="Posts\Contract\IPostService.cs" />
+    <Compile Include="Posts\Mapping\PostMapping.cs" />
+    <Compile Include="Posts\Models\PostModel.cs" />
+    <Compile Include="Posts\Models\PostView.cs" />
+    <Compile Include="Posts\Services\PostRepository.cs" />
+    <Compile Include="Posts\Services\PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
   </ItemGroup>

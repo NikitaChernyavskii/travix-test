@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using DAL.Entities;
 using Infrastructure.Comments.Contract;
 using Infrastructure.Comments.Models;
@@ -23,6 +22,7 @@ namespace Infrastructure.Tests.Comments
         [TestInitialize]
         public void Initialize()
         {
+            InitializeMappingService.InitializaAutoMapper();
             _mockCommentRepository = new Mock<IRepository<Comment>>();
             _mockCommentValidator = new Mock<IValidator<CommentModel>>();
         }
@@ -33,7 +33,6 @@ namespace Infrastructure.Tests.Comments
             ICommentService commentService = CreateCommentService();
             List<Comment> commentEntities = CreateComments();
             _mockCommentRepository.Setup(r => r.Get()).Returns(Task.FromResult(commentEntities));
-            InitializaAutoMapper();
             List<CommentView> commentsResult = Task.Run(() => commentService.Get()).Result;
 
             Assert.AreEqual(commentEntities.Count, commentsResult.Count);
@@ -91,14 +90,6 @@ namespace Infrastructure.Tests.Comments
                 CommentRepository = _mockCommentRepository.Object,
                 CommentValidator = _mockCommentValidator.Object
             };
-        }
-
-        private void InitializaAutoMapper()
-        {
-            Mapper.Initialize(config =>
-            {
-                InfrastructureMappingRegisterService.Register(config);
-            });
         }
     }
 }

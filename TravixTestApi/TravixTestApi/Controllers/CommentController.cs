@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Infrastructure.Comments.Contract;
@@ -29,6 +30,13 @@ namespace TravixTestApi.Controllers
         public async Task Create(CommentModel model)
         {
             await CommentService.Create(model);
+        }
+
+        [HttpPut]
+        [Route("commentId/{id}")]
+        public async Task Create(Guid id, CommentModel model)
+        {
+            await CommentService.Update(id, model);
         }
     }
 }
