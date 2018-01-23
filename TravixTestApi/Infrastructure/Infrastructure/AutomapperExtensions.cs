@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using AutoMapper;
 
-namespace Infrastructure.Infrastructure
+namespace Core.Infrastructure
 {
     public static class AutomapperExtensions
     {

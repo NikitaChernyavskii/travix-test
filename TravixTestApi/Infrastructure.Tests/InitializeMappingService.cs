@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Infrastructure.Infrastructure;
+using Core.Infrastructure;
 
-namespace Infrastructure.Tests
+namespace Core.Tests
 {
 
     public static class InitializeMappingService
@@ -20,7 +20,7 @@ namespace Infrastructure.Tests
                     {
                         Mapper.Initialize(config =>
                         {
-                            InfrastructureMappingRegisterService.Register(config);
+                            CoreMappingRegisterService.Register(config);
                         });
                         _isInitialized = true;
                     }

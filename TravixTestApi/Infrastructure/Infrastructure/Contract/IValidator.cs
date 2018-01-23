@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Infrastructure.Contract
+﻿namespace Core.Infrastructure.Contract
 {
     public interface IValidator<TContext>
     {

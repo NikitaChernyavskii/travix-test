@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Infrastructure.Posts.Contract;
-using Infrastructure.Posts.Models;
+using Core.Posts.Contract;
+using Core.Posts.Models;
 using Ninject;
 
 namespace TravixTestApi.Controllers

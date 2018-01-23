@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Infrastructure.Posts.Models
+namespace Core.Posts.Models
 {
     public class PostModel
     {

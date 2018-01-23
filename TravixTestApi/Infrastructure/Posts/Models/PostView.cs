@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Infrastructure.Comments.Models;
+using Core.Comments.Models;
 
-namespace Infrastructure.Posts.Models
+namespace Core.Posts.Models
 {
     public class PostView
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Infrastructure.Comments.Models;
+using Core.Comments.Models;
 
-namespace Infrastructure.Comments.Contract
+namespace Core.Comments.Contract
 {
     public interface ICommentService
     {

@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Core.Comments.Contract;
+using Core.Comments.Models;
+using Core.Comments.Services;
+using Core.Comments.Validators;
+using Core.Infrastructure;
+using Core.Infrastructure.Contract;
 using DAL.Entities;
-using Infrastructure.Comments.Contract;
-using Infrastructure.Comments.Models;
-using Infrastructure.Comments.Services;
-using Infrastructure.Comments.Validators;
-using Infrastructure.Infrastructure;
-using Infrastructure.Infrastructure.Contract;
+using DAL.Repository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Infrastructure.Tests.Comments
+namespace Core.Tests.Comments
 {
     [TestClass]
     public class CommentTests
@@ -28,12 +29,13 @@ namespace Infrastructure.Tests.Comments
         }
 
         [TestMethod]
-        public void GetComments_Successfully()
+        public async Task GetComments_Successfully()
         {
             ICommentService commentService = CreateCommentService();
             List<Comment> commentEntities = CreateComments();
             _mockCommentRepository.Setup(r => r.Get()).Returns(Task.FromResult(commentEntities));
-            List<CommentView> commentsResult = Task.Run(() => commentService.Get()).Result;
+
+            List<CommentView> commentsResult = await commentService.Get();
 
             Assert.AreEqual(commentEntities.Count, commentsResult.Count);
         }
@@ -48,6 +50,7 @@ namespace Infrastructure.Tests.Comments
                 Value = String.Empty
             };
             CommentValidator validator = new CommentValidator();
+
             validator.Validate(model);
         }
 
@@ -61,6 +64,7 @@ namespace Infrastructure.Tests.Comments
                 Value = "too small"
             };
             CommentValidator validator = new CommentValidator();
+
             validator.Validate(model);
         }
 

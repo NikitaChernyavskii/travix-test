@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DAL.Entities;
-using Infrastructure.Infrastructure;
-using Infrastructure.Posts.Contract;
-using Infrastructure.Posts.Mapping;
-using Infrastructure.Posts.Models;
+using DAL.Repository;
+using Core.Posts.Contract;
+using Core.Posts.Mapping;
+using Core.Posts.Models;
 using Ninject;
 
-namespace Infrastructure.Posts.Services
+namespace Core.Posts.Services
 {
     public class PostService : IPostService
     {

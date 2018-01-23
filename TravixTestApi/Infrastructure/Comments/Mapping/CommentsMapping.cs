@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using DAL.Entities;
-using Infrastructure.Comments.Models;
+using Core.Comments.Models;
 
-namespace Infrastructure.Comments.Mapping
+namespace Core.Comments.Mapping
 {
     public static class CommentsMapping
     {

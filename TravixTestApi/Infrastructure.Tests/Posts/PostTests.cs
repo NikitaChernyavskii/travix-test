@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Core.Posts.Contract;
+using Core.Posts.Models;
+using Core.Posts.Services;
 using DAL.Entities;
-using Infrastructure.Infrastructure;
-using Infrastructure.Posts.Contract;
-using Infrastructure.Posts.Models;
-using Infrastructure.Posts.Services;
+using DAL.Repository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Infrastructure.Tests.Posts
+namespace Core.Tests.Posts
 {
     [TestClass]
     public class PostTests
@@ -24,12 +24,13 @@ namespace Infrastructure.Tests.Posts
         }
 
         [TestMethod]
-        public void GetPosts_Successfully()
+        public async Task GetPosts_Successfully()
         {
             IPostService postService = CreatePostService();
             List<Post> postEntities = CreatePosts();
             _mockPostRepository.Setup(r => r.Get()).Returns(Task.FromResult(postEntities));
-            List<PostView> postsResult = Task.Run(() => postService.Get()).Result;
+
+            List<PostView> postsResult = await postService.Get();
 
             Assert.AreEqual(postEntities.Count, postsResult.Count);
         }

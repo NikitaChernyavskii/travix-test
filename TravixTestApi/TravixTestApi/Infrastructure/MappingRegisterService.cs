@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Infrastructure.Infrastructure;
+using Core.Infrastructure;
 
 namespace TravixTestApi.Infrastructure
 {
@@ -9,7 +9,7 @@ namespace TravixTestApi.Infrastructure
         {
             Mapper.Initialize(config =>
             {
-                InfrastructureMappingRegisterService.Register(config);
+                CoreMappingRegisterService.Register(config);
             });
         }
     }

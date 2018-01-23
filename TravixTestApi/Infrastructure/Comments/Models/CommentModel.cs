@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Infrastructure.Comments.Models
+namespace Core.Comments.Models
 {
     public class CommentModel
     {

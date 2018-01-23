@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using DAL.Entities;
-using Infrastructure.Posts.Models;
+using Core.Posts.Models;
 
-namespace Infrastructure.Posts.Mapping
+namespace Core.Posts.Mapping
 {
     public static class PostMapping
     {

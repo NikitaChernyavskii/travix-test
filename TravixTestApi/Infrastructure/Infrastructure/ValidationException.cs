@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Infrastructure.Infrastructure
+namespace Core.Infrastructure
 {
     public class ValidationException : Exception
     {

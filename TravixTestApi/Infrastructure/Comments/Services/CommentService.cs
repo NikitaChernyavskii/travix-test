@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DAL.Entities;
-using Infrastructure.Comments.Contract;
-using Infrastructure.Comments.Mapping;
-using Infrastructure.Comments.Models;
-using Infrastructure.Infrastructure;
-using Infrastructure.Infrastructure.Contract;
+using DAL.Repository;
+using Core.Comments.Contract;
+using Core.Comments.Mapping;
+using Core.Comments.Models;
+using Core.Infrastructure.Contract;
 using Ninject;
 
-namespace Infrastructure.Comments.Services
+namespace Core.Comments.Services
 {
     public class CommentService : ICommentService
     {

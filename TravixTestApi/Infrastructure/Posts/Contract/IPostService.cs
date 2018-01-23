@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Infrastructure.Posts.Models;
+using Core.Posts.Models;
 
-namespace Infrastructure.Posts.Contract
+namespace Core.Posts.Contract
 {
     public interface IPostService
     {

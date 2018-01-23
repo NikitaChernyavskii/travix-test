@@ -1,9 +1,9 @@
 ﻿using System;
-using Infrastructure.Comments.Models;
-using Infrastructure.Infrastructure;
-using Infrastructure.Infrastructure.Contract;
+using Core.Comments.Models;
+using Core.Infrastructure;
+using Core.Infrastructure.Contract;
 
-namespace Infrastructure.Comments.Validators
+namespace Core.Comments.Validators
 {
     public class CommentValidator : IValidator<CommentModel>
     {
